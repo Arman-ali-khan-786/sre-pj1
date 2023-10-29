@@ -2,7 +2,9 @@
 <html>
 <head>
 <script>
-  // window.location.replace("http://smpl2.s3-website-us-east-1.amazonaws.com");
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get('code');
+  window.location.replace(`http://smpl2.s3-website-us-east-1.amazonaws.com/?code=${code}`);
 </script>
 </head>
 <body>
